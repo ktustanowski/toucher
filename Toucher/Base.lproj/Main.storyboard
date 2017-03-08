@@ -96,6 +96,26 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fjm-bi-hg0" id="div-Ko-UFY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9XQ-Ja-TpP">
+                                                    <rect key="frame" x="163" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="counterSwitchTapped:" destination="03M-wq-mXX" eventType="valueChanged" id="kDO-9W-vGp"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JO-gl-M5i">
+                                                    <rect key="frame" x="132" y="11" width="23" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9XQ-Ja-TpP" firstAttribute="leading" secondItem="0JO-gl-M5i" secondAttribute="trailing" constant="8" symbolic="YES" id="RzL-Nd-Xdm"/>
+                                                <constraint firstItem="9XQ-Ja-TpP" firstAttribute="centerX" secondItem="div-Ko-UFY" secondAttribute="centerX" id="XTp-uz-ACp"/>
+                                                <constraint firstItem="0JO-gl-M5i" firstAttribute="centerY" secondItem="9XQ-Ja-TpP" secondAttribute="centerY" id="eJv-bq-Xwv"/>
+                                                <constraint firstItem="9XQ-Ja-TpP" firstAttribute="centerY" secondItem="div-Ko-UFY" secondAttribute="centerY" id="iDp-3m-mYC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="A6W-DS-3ne">
@@ -129,6 +149,7 @@
                     <connections>
                         <outlet property="bottomMinusButton" destination="yc7-Pw-H3Z" id="Q3q-Sd-vDn"/>
                         <outlet property="bottomPlusButton" destination="wTo-Vh-PeE" id="05M-dq-x9p"/>
+                        <outlet property="counterSwitch" destination="9XQ-Ja-TpP" id="KRZ-cI-LjW"/>
                         <outlet property="plusSegmented" destination="t21-Tg-rT8" id="Qnd-Ml-Tr5"/>
                         <outlet property="topMinusButton" destination="59H-FS-u2t" id="b2Y-NL-bPp"/>
                         <outlet property="topPlusButton" destination="WIf-PM-XX8" id="xxP-Xf-XGE"/>

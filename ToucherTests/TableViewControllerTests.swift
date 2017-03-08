@@ -22,6 +22,7 @@ class ToucherTests: XCTestCase {
         self.viewController.loadViewIfNeeded()
     }
     
+    //MARK: Bar Button Item
     func testThatWhenUserTapTopPlusButtonIncrementsTitle() {
         viewController.topPlusButton.tap()
         
@@ -34,6 +35,7 @@ class ToucherTests: XCTestCase {
         XCTAssertEqual(viewController.title, "-1")
     }
 
+    //MARK: UIButton
     func testThatWhenUserTapBottomPlusButtonIncrementsTitle() {
         viewController.bottomPlusButton.tap()
         
@@ -46,6 +48,7 @@ class ToucherTests: XCTestCase {
         XCTAssertEqual(viewController.title, "-1")
     }
     
+    //MARK: UISegmentedControl
     func testThatWhenUserTapFirstSegmentIncrementsTitle() {
         viewController.plusSegmented.tap(on: 0)
         
@@ -62,6 +65,47 @@ class ToucherTests: XCTestCase {
         viewController.plusSegmented.tap(on: 2)
         
         XCTAssertEqual(viewController.title, "3")
+    }
+
+    //MARK: UISwitch
+    func testThatWhenUserSwitchOffCounterSwitchPadlockIsVisible() {
+        viewController.counterSwitch.off()
+        
+        XCTAssertEqual(viewController.title, "🔒")
+    }
+    
+    func testThatWhenUserSwitchOffCounterSwitchCounterCantBeIncremented() {
+        viewController.counter = 5
+        viewController.counterSwitch.off()
+        viewController.topPlusButton.tap()
+        
+        viewController.counterSwitch.on()
+        
+        XCTAssertEqual(viewController.title, "5")
+    }
+
+    func testThatWhenUserSwitchOffCounterSwitchCounterCantBeDecremented() {
+        viewController.counter = 5
+        viewController.counterSwitch.off()
+        viewController.topMinusButton.tap()
+
+        viewController.counterSwitch.on()
+        
+        XCTAssertEqual(viewController.title, "5")
+    }
+
+}
+
+public extension UISwitch {
+    
+    public func on() {
+        isOn = true
+        sendActions(for: .valueChanged)
+    }
+    
+    public func off() {
+        isOn = false
+        sendActions(for: .valueChanged)
     }
 
 }

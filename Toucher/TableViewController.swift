@@ -15,17 +15,25 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var topMinusButton: UIBarButtonItem!    
     @IBOutlet weak var bottomPlusButton: UIButton!
     @IBOutlet weak var bottomMinusButton: UIButton!
+    @IBOutlet weak var counterSwitch: UISwitch!
     
-    var counter = 0 {
-        didSet {
-            title = "\(counter)"
+    var count: Int?
+    var counter: Int {
+        get {
+            return count ?? 0
+        }
+        
+        set {
+            if counterSwitch.isOn {
+                self.count = newValue
+                title = "\(newValue)"
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         counter = 0
-//        plusSegmented.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControlEvents#>)
     }
 
     @IBAction func plusTapped() {
@@ -39,6 +47,10 @@ class TableViewController: UITableViewController {
     @IBAction func plusSegmentedTapped(_ sender: UISegmentedControl) {
         let index = sender.selectedSegmentIndex
         counter += index + 1
+    }
+    
+    @IBAction func counterSwitchTapped(_ sender: UISwitch) {
+        self.title = sender.isOn ? "\(counter)" : "🔒"
     }
 }
 
