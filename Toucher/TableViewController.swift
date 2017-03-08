@@ -16,6 +16,7 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var bottomPlusButton: UIButton!
     @IBOutlet weak var bottomMinusButton: UIButton!
     @IBOutlet weak var counterSwitch: UISwitch!
+    @IBOutlet weak var counterStepper: UIStepper!
     
     var count: Int?
     var counter: Int {
@@ -51,6 +52,11 @@ class TableViewController: UITableViewController {
     
     @IBAction func counterSwitchTapped(_ sender: UISwitch) {
         self.title = sender.isOn ? "\(counter)" : "🔒"
+    }
+    
+    @IBAction func counterStepperTapped(_ sender: UIStepper) {
+        let value = Int(sender.value)
+        counter += value
     }
 }
 

@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="pph-bJ-pzi">
-                            <rect key="frame" x="0.0" y="196" width="375" height="63"/>
+                            <rect key="frame" x="0.0" y="240" width="375" height="63"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTo-Vh-PeE">
@@ -68,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lu3-wQ-zou" id="2Hl-7c-nBP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="t21-Tg-rT8">
@@ -94,7 +94,7 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fjm-bi-hg0" id="div-Ko-UFY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9XQ-Ja-TpP">
@@ -122,8 +122,38 @@
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A6W-DS-3ne" id="VEb-2C-8dh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="kga-Rz-lBC">
+                                                    <rect key="frame" x="67" y="6" width="240" height="31"/>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kga-Rz-lBC" firstAttribute="centerX" secondItem="VEb-2C-8dh" secondAttribute="centerX" id="VD4-gD-mD6"/>
+                                                <constraint firstItem="kga-Rz-lBC" firstAttribute="centerY" secondItem="VEb-2C-8dh" secondAttribute="centerY" id="jKi-gY-tLv"/>
+                                                <constraint firstItem="kga-Rz-lBC" firstAttribute="leading" secondItem="VEb-2C-8dh" secondAttribute="leadingMargin" constant="61" id="vP5-fF-Sq3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dJV-gG-na3">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dJV-gG-na3" id="MwS-sE-err">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="agd-WT-1is">
+                                                    <rect key="frame" x="140" y="8" width="94" height="29"/>
+                                                    <connections>
+                                                        <action selector="counterStepperTapped:" destination="03M-wq-mXX" eventType="valueChanged" id="chq-qd-IyX"/>
+                                                    </connections>
+                                                </stepper>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="agd-WT-1is" firstAttribute="top" secondItem="MwS-sE-err" secondAttribute="topMargin" id="HuT-dp-3lA"/>
+                                                <constraint firstItem="agd-WT-1is" firstAttribute="centerX" secondItem="MwS-sE-err" secondAttribute="centerX" id="SFv-2P-loo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -149,6 +179,7 @@
                     <connections>
                         <outlet property="bottomMinusButton" destination="yc7-Pw-H3Z" id="Q3q-Sd-vDn"/>
                         <outlet property="bottomPlusButton" destination="wTo-Vh-PeE" id="05M-dq-x9p"/>
+                        <outlet property="counterStepper" destination="agd-WT-1is" id="8fI-Tg-ytk"/>
                         <outlet property="counterSwitch" destination="9XQ-Ja-TpP" id="KRZ-cI-LjW"/>
                         <outlet property="plusSegmented" destination="t21-Tg-rT8" id="Qnd-Ml-Tr5"/>
                         <outlet property="topMinusButton" destination="59H-FS-u2t" id="b2Y-NL-bPp"/>
