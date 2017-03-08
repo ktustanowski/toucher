@@ -53,13 +53,13 @@ class ToucherTests: XCTestCase {
     }
 
     func testThatWhenUserTapFirstSegmentIncrementsTitleByTwo() {
-        viewController.plusSegmented.tap(on: 2)
+        viewController.plusSegmented.tap(on: 1)
         
         XCTAssertEqual(viewController.title, "2")
     }
 
     func testThatWhenUserTapFirstSegmentIncrementsTitleByThree() {
-        viewController.plusSegmented.tap(on: 3)
+        viewController.plusSegmented.tap(on: 2)
         
         XCTAssertEqual(viewController.title, "3")
     }
@@ -68,8 +68,9 @@ class ToucherTests: XCTestCase {
 
 public extension UISegmentedControl {
     
-    public func tap(on index: Int) { //maybe update to be able to use .first, .second, .third etc.
+    public func tap(on index: Int) { //TODO: maybe update to be able to use .first, .second, .third etc.
         selectedSegmentIndex = index
+        sendActions(for: .valueChanged)
     }
 }
 
