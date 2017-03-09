@@ -94,7 +94,50 @@ class ToucherTests: XCTestCase {
         XCTAssertEqual(viewController.title, "5")
     }
 
+//    func testThatWhenUserTapPlusOnStepperCurrentValueIsSetToCounter() {
+//        viewController.counterStepper.tap(.increment)
+//        
+//        XCTAssertEqual(viewController.title, "1")
+//    }
+    
+//    func testThatWhenUserTapMinusOnStepperCurrentValueIsSetToCounter() {
+//        viewController.counterStepper.tap(.increment)
+//        viewController.counterStepper.tap(.increment)
+//        viewController.counterStepper.tap(.decrement)
+//        
+//        XCTAssertEqual(viewController.title, "1")
+//    }
+    
+    func testThatWhenUserSlidesSliderCounterValueIsSet() {
+        viewController.counterSlider.slide(to: 7)
+        
+        XCTAssertEqual(viewController.title, "7")
+    }
 }
+
+public extension UISlider {
+    
+    public func slide(to value: Float) {
+        self.value = value
+        sendActions(for: .valueChanged)
+    }
+}
+
+//Might have to check continous, step etc. and calculate value properly
+//public enum UIStepperSegment: Double {
+//    case increment = 1.0
+//    case decrement = -1.0
+//}
+//
+//public extension UIStepper {
+//    
+//    public func tap(_ segment: UIStepperSegment) {
+//        self.
+//        //        value += stepValue * segment.rawValue
+//        sendActions(for: .valueChanged)
+//    }
+//    
+//}
 
 public extension UISwitch {
     

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToucherTests/TableViewControllerTests.swift"
-            timestampString = "510705207.507913"
+            timestampString = "510790431.29035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "tap(on:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,13 +26,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Toucher/TableViewController.swift"
-            timestampString = "510706548.047636"
+            timestampString = "510790212.819751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "counterStepperTapped(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToucherTests/TableViewControllerTests.swift"
+            timestampString = "510790431.29035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
