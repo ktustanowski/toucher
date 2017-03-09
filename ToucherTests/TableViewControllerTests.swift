@@ -128,6 +128,18 @@ class ToucherTests: XCTestCase {
         
         XCTAssertEqual(viewController.title, "-1")
     }
+    
+    func testThatWhenUserTapAccessoryButtonOnIncrementCellCounterIsSetToPlusString() {
+        viewController.tableView.tapAccessoryButton(forRowAt: IndexPath(row: Cells.plus, section: Sections.cells))
+        
+        XCTAssertEqual(viewController.title, "+")
+    }
+    
+    func testThatWhenUserTapAccessoryButtonOnDecrementCellCounterIsSetToPlusString() {
+        viewController.tableView.tapAccessoryButton(forRowAt: IndexPath(row: Cells.minus, section: Sections.cells))
+        
+        XCTAssertEqual(viewController.title, "-")
+    }
 }
 
 
@@ -137,6 +149,9 @@ public extension UITableView {
         delegate?.tableView?(self, didSelectRowAt: indexPath)
     }
     
+    public func tapAccessoryButton(forRowAt indexPath: IndexPath) {
+        delegate?.tableView?(self, accessoryButtonTappedForRowWith: indexPath)
+    }
 }
 
 public extension UISlider {

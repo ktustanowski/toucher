@@ -89,4 +89,14 @@ extension TableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        if indexPath.section == Sections.cells {
+            if indexPath.row == Cells.plus {
+                title = "+"
+            } else {
+                title = "-"
+            }
+        }
+    }
+    
 }

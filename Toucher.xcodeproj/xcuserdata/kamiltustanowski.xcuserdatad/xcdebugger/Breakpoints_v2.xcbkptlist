@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToucherTests/TableViewControllerTests.swift"
-            timestampString = "510792307.660407"
+            timestampString = "510792851.744866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "tap(on:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToucherTests/TableViewControllerTests.swift"
-            timestampString = "510792307.660407"
+            timestampString = "510792851.744866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170">
+            startingLineNumber = "179"
+            endingLineNumber = "179">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
