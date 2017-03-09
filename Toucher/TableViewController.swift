@@ -10,10 +10,16 @@ import UIKit
 
 struct Sections {
     static let controls = 0
-    static let cells = 1
+    static let tableCells = 1
+    static let collectionCells = 2
 }
 
-struct Cells {
+struct TableCells {
+    static let plus = 0
+    static let minus = 1
+}
+
+struct CollectionCells {
     static let plus = 0
     static let minus = 1
 }
@@ -28,6 +34,7 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var counterSwitch: UISwitch!
     @IBOutlet weak var counterStepper: UIStepper!
     @IBOutlet weak var counterSlider: UISlider!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var count: Int?
     var counter: Int {
@@ -80,8 +87,8 @@ class TableViewController: UITableViewController {
 extension TableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == Sections.cells {
-            if indexPath.row == Cells.plus {
+        if indexPath.section == Sections.tableCells {
+            if indexPath.row == TableCells.plus {
                 counter += 1
             } else {
                 counter -= 1
@@ -90,8 +97,8 @@ extension TableViewController {
     }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        if indexPath.section == Sections.cells {
-            if indexPath.row == Cells.plus {
+        if indexPath.section == Sections.tableCells {
+            if indexPath.row == TableCells.plus {
                 title = "+"
             } else {
                 title = "-"
@@ -99,4 +106,31 @@ extension TableViewController {
         }
     }
     
+}
+
+extension TableViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == CollectionCells.plus {
+            counter += 1
+        } else {
+            counter -= 1
+        }
+    }
+    
+}
+
+extension TableViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVCell", for: indexPath)
+        
+        cell.backgroundColor = indexPath.row == 0 ? .green : .red
+        
+        return cell
+    }
 }

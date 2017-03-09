@@ -118,30 +118,45 @@ class ToucherTests: XCTestCase {
     
 // MARK: UITableView
     func testThatWhenUserTapIncrementCellCounterIsIncremented() {
-        viewController.tableView.tapRow(at: IndexPath(row: Cells.plus, section: Sections.cells))
+        viewController.tableView.tapRow(at: IndexPath(row: TableCells.plus, section: Sections.tableCells))
         
         XCTAssertEqual(viewController.title, "1")
     }
     
     func testThatWhenUserTapDecrementCellCounterIsDecremented() {
-        viewController.tableView.tapRow(at: IndexPath(row: Cells.minus, section: Sections.cells))
+        viewController.tableView.tapRow(at: IndexPath(row: TableCells.minus, section: Sections.tableCells))
         
         XCTAssertEqual(viewController.title, "-1")
     }
     
     func testThatWhenUserTapAccessoryButtonOnIncrementCellCounterIsSetToPlusString() {
-        viewController.tableView.tapAccessoryButton(forRowAt: IndexPath(row: Cells.plus, section: Sections.cells))
+        viewController.tableView.tapAccessoryButton(forRowAt: IndexPath(row: TableCells.plus, section: Sections.tableCells))
         
         XCTAssertEqual(viewController.title, "+")
     }
     
     func testThatWhenUserTapAccessoryButtonOnDecrementCellCounterIsSetToPlusString() {
-        viewController.tableView.tapAccessoryButton(forRowAt: IndexPath(row: Cells.minus, section: Sections.cells))
+        viewController.tableView.tapAccessoryButton(forRowAt: IndexPath(row: TableCells.minus, section: Sections.tableCells))
         
         XCTAssertEqual(viewController.title, "-")
     }
+
+// MARK: UICollectionView
+    func testThatWhenUserTapOnRedCollectionViewCellCounterIsIncremented() {
+        viewController.collectionView.tapItem(at: IndexPath(item: CollectionCells.plus, section: 0))
+
+        XCTAssertEqual(viewController.title, "1")
+    }
 }
 
+
+public extension UICollectionView {
+    
+    public func tapItem(at indexPath: IndexPath) {
+        delegate?.collectionView?(self, didSelectItemAt: indexPath)
+    }
+    
+}
 
 public extension UITableView {
     

@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="pph-bJ-pzi">
-                            <rect key="frame" x="0.0" y="384" width="375" height="63"/>
+                            <rect key="frame" x="0.0" y="569" width="375" height="63"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTo-Vh-PeE">
@@ -199,6 +199,45 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="CollectionView" id="88h-VK-x7P">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="157" id="dz0-i4-VJ8">
+                                        <rect key="frame" x="0.0" y="348" width="375" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dz0-i4-VJ8" id="XYT-7r-YMc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="156.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SnL-j6-fdS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pdD-2W-2ex">
+                                                        <size key="itemSize" width="147" height="157"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CVCell" id="JgV-8C-LBQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="147" height="157"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="157"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </view>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="03M-wq-mXX" id="zsN-iS-4IH"/>
+                                                        <outlet property="delegate" destination="03M-wq-mXX" id="YJS-2a-GiM"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="03M-wq-mXX" id="zaj-dp-9s7"/>
@@ -220,6 +259,7 @@
                     <connections>
                         <outlet property="bottomMinusButton" destination="yc7-Pw-H3Z" id="Q3q-Sd-vDn"/>
                         <outlet property="bottomPlusButton" destination="wTo-Vh-PeE" id="05M-dq-x9p"/>
+                        <outlet property="collectionView" destination="SnL-j6-fdS" id="UCa-Kx-Dpr"/>
                         <outlet property="counterSlider" destination="kga-Rz-lBC" id="MbI-Da-weC"/>
                         <outlet property="counterStepper" destination="agd-WT-1is" id="8fI-Tg-ytk"/>
                         <outlet property="counterSwitch" destination="9XQ-Ja-TpP" id="KRZ-cI-LjW"/>
