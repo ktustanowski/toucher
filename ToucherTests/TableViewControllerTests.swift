@@ -94,6 +94,7 @@ class ToucherTests: XCTestCase {
         XCTAssertEqual(viewController.title, "5")
     }
 
+// MARK: UIStepper
 //    func testThatWhenUserTapPlusOnStepperCurrentValueIsSetToCounter() {
 //        viewController.counterStepper.tap(.increment)
 //        
@@ -108,11 +109,34 @@ class ToucherTests: XCTestCase {
 //        XCTAssertEqual(viewController.title, "1")
 //    }
     
+// MARK: UISlider
     func testThatWhenUserSlidesSliderCounterValueIsSet() {
         viewController.counterSlider.slide(to: 7)
         
         XCTAssertEqual(viewController.title, "7")
     }
+    
+// MARK: UITableView
+    func testThatWhenUserTapIncrementCellCounterIsIncremented() {
+        viewController.tableView.tapRow(at: IndexPath(row: Cells.plus, section: Sections.cells))
+        
+        XCTAssertEqual(viewController.title, "1")
+    }
+    
+    func testThatWhenUserTapDecrementCellCounterIsDecremented() {
+        viewController.tableView.tapRow(at: IndexPath(row: Cells.minus, section: Sections.cells))
+        
+        XCTAssertEqual(viewController.title, "-1")
+    }
+}
+
+
+public extension UITableView {
+    
+    public func tapRow(at indexPath: IndexPath) {
+        delegate?.tableView?(self, didSelectRowAt: indexPath)
+    }
+    
 }
 
 public extension UISlider {

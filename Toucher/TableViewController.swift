@@ -8,6 +8,16 @@
 
 import UIKit
 
+struct Sections {
+    static let controls = 0
+    static let cells = 1
+}
+
+struct Cells {
+    static let plus = 0
+    static let minus = 1
+}
+
 class TableViewController: UITableViewController {
 
     @IBOutlet weak var plusSegmented: UISegmentedControl!
@@ -67,3 +77,16 @@ class TableViewController: UITableViewController {
     
 }
 
+extension TableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == Sections.cells {
+            if indexPath.row == Cells.plus {
+                counter += 1
+            } else {
+                counter -= 1
+            }
+        }
+    }
+    
+}
