@@ -114,7 +114,7 @@ extension TableViewController: UICollectionViewDelegate {
         if indexPath.row == CollectionCells.plus {
             counter += 1
         } else {
-            counter -= 1
+            counter -= 1            
         }
     }
     

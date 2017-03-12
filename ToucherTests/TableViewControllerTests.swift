@@ -63,14 +63,14 @@ class ToucherTests: XCTestCase {
 
     func testThatWhenUserTapFirstSegmentIncrementsTitleByThree() {
         viewController.plusSegmented.tap(on: 2)
-        
+
         XCTAssertEqual(viewController.title, "3")
     }
 
     //MARK: UISwitch
     func testThatWhenUserSwitchOffCounterSwitchPadlockIsVisible() {
         viewController.counterSwitch.off()
-        
+
         XCTAssertEqual(viewController.title, "🔒")
     }
     
@@ -149,34 +149,6 @@ class ToucherTests: XCTestCase {
     }
 }
 
-
-public extension UICollectionView {
-    
-    public func tapItem(at indexPath: IndexPath) {
-        delegate?.collectionView?(self, didSelectItemAt: indexPath)
-    }
-    
-}
-
-public extension UITableView {
-    
-    public func tapRow(at indexPath: IndexPath) {
-        delegate?.tableView?(self, didSelectRowAt: indexPath)
-    }
-    
-    public func tapAccessoryButton(forRowAt indexPath: IndexPath) {
-        delegate?.tableView?(self, accessoryButtonTappedForRowWith: indexPath)
-    }
-}
-
-public extension UISlider {
-    
-    public func slide(to value: Float) {
-        self.value = value
-        sendActions(for: .valueChanged)
-    }
-}
-
 //Might have to check continous, step etc. and calculate value properly
 //public enum UIStepperSegment: Double {
 //    case increment = 1.0
@@ -193,44 +165,3 @@ public extension UISlider {
 //    
 //}
 
-public extension UISwitch {
-    
-    public func on() {
-        isOn = true
-        sendActions(for: .valueChanged)
-    }
-    
-    public func off() {
-        isOn = false
-        sendActions(for: .valueChanged)
-    }
-
-}
-
-public extension UISegmentedControl {
-    
-    public func tap(on index: Int) { //TODO: maybe update to be able to use .first, .second, .third etc.
-        selectedSegmentIndex = index
-        sendActions(for: .valueChanged)
-    }
-}
-
-public extension UIButton {
-    
-    public func perform(_ event: UIControlEvents) {
-        sendActions(for: event)
-    }
-    
-    public func tap() {
-        sendActions(for: UIControlEvents.allTouchEvents)
-    }
-}
-
-public extension UIBarButtonItem {
-    
-    public func tap() {
-        guard let target = target else { return }
-        
-        _ = target.perform(action)
-    }
-}
