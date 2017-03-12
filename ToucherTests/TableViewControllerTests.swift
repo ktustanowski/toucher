@@ -10,7 +10,7 @@ import XCTest
 import UIKit
 @testable import Toucher
 
-class ToucherTests: XCTestCase {
+class TableViewControllerTests: XCTestCase {
     
     var viewController: TableViewController!
     
@@ -18,8 +18,8 @@ class ToucherTests: XCTestCase {
         super.setUp()
         
         let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UINavigationController
-        self.viewController = navigationController.viewControllers.first as! TableViewController
-        self.viewController.loadViewIfNeeded()
+        viewController = navigationController.viewControllers.first as! TableViewController
+        viewController.loadViewIfNeeded()
     }
     
     //MARK: Bar Button Item

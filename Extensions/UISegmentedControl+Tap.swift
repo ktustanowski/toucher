@@ -11,7 +11,7 @@ import UIKit
 public extension UISegmentedControl {
     
     public func tap(on index: Int) { //TODO: maybe update to be able to use .first, .second, .third etc.
-        selectedSegmentIndex = index
+        selectedSegmentIndex = index        
         sendActions(for: .valueChanged)
     }
 }

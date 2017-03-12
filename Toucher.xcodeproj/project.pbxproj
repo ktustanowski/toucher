@@ -13,13 +13,15 @@
 		9A13E0901E706FB300B384B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A13E08F1E706FB300B384B5 /* Assets.xcassets */; };
 		9A13E0931E706FB300B384B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A13E0911E706FB300B384B5 /* LaunchScreen.storyboard */; };
 		9A13E09E1E706FB300B384B5 /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A13E09D1E706FB300B384B5 /* TableViewControllerTests.swift */; };
-		9A1E281C1E74921400763694 /* UIBarButtonItem+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E28141E748FD800763694 /* UIBarButtonItem+Tap.swift */; };
 		9A1E281D1E74921400763694 /* UIButton+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E280E1E748DBC00763694 /* UIButton+Tap.swift */; };
 		9A1E281E1E74921400763694 /* UISegmentedControl+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E28121E748F7900763694 /* UISegmentedControl+Tap.swift */; };
 		9A1E281F1E74921400763694 /* UISwitch+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E28161E74902E00763694 /* UISwitch+Tap.swift */; };
 		9A1E28201E74921400763694 /* UISlider+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E28181E74908300763694 /* UISlider+Tap.swift */; };
 		9A1E28211E74921400763694 /* UITableView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E281A1E7490F100763694 /* UITableView+Tap.swift */; };
-		9A1E28231E74942500763694 /* UICollectionView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E28221E74942500763694 /* UICollectionView+Tap.swift */; };
+		9A1E28251E75FC6400763694 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E28241E75FC6400763694 /* GestureViewController.swift */; };
+		9A1E28281E75FCA800763694 /* UIBarButtonItem+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E28261E75FCA800763694 /* UIBarButtonItem+Tap.swift */; };
+		9A1E28291E75FCA800763694 /* UICollectionView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E28271E75FCA800763694 /* UICollectionView+Tap.swift */; };
+		9A1E282B1E75FEE900763694 /* GestureViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E282A1E75FEE900763694 /* GestureViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +47,13 @@
 		9A13E09F1E706FB300B384B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A1E280E1E748DBC00763694 /* UIButton+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Tap.swift"; path = "Extensions/UIButton+Tap.swift"; sourceTree = SOURCE_ROOT; };
 		9A1E28121E748F7900763694 /* UISegmentedControl+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Tap.swift"; path = "Extensions/UISegmentedControl+Tap.swift"; sourceTree = SOURCE_ROOT; };
-		9A1E28141E748FD800763694 /* UIBarButtonItem+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Tap.swift"; sourceTree = "<group>"; };
 		9A1E28161E74902E00763694 /* UISwitch+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UISwitch+Tap.swift"; path = "Extensions/UISwitch+Tap.swift"; sourceTree = SOURCE_ROOT; };
 		9A1E28181E74908300763694 /* UISlider+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UISlider+Tap.swift"; path = "Extensions/UISlider+Tap.swift"; sourceTree = SOURCE_ROOT; };
 		9A1E281A1E7490F100763694 /* UITableView+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Tap.swift"; path = "Extensions/UITableView+Tap.swift"; sourceTree = SOURCE_ROOT; };
-		9A1E28221E74942500763694 /* UICollectionView+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Tap.swift"; sourceTree = "<group>"; };
+		9A1E28241E75FC6400763694 /* GestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
+		9A1E28261E75FCA800763694 /* UIBarButtonItem+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Tap.swift"; sourceTree = "<group>"; };
+		9A1E28271E75FCA800763694 /* UICollectionView+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Tap.swift"; sourceTree = "<group>"; };
+		9A1E282A1E75FEE900763694 /* GestureViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				9A1E280D1E748D8E00763694 /* Extensions */,
 				9A13E0881E706FB300B384B5 /* AppDelegate.swift */,
 				9A13E08A1E706FB300B384B5 /* TableViewController.swift */,
+				9A1E28241E75FC6400763694 /* GestureViewController.swift */,
 				9A13E08C1E706FB300B384B5 /* Main.storyboard */,
 				9A13E08F1E706FB300B384B5 /* Assets.xcassets */,
 				9A13E0911E706FB300B384B5 /* LaunchScreen.storyboard */,
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				9A13E09D1E706FB300B384B5 /* TableViewControllerTests.swift */,
+				9A1E282A1E75FEE900763694 /* GestureViewControllerTests.swift */,
 				9A13E09F1E706FB300B384B5 /* Info.plist */,
 			);
 			path = ToucherTests;
@@ -114,13 +120,13 @@
 		9A1E280D1E748D8E00763694 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9A1E28141E748FD800763694 /* UIBarButtonItem+Tap.swift */,
+				9A1E28261E75FCA800763694 /* UIBarButtonItem+Tap.swift */,
+				9A1E28271E75FCA800763694 /* UICollectionView+Tap.swift */,
 				9A1E280E1E748DBC00763694 /* UIButton+Tap.swift */,
 				9A1E28121E748F7900763694 /* UISegmentedControl+Tap.swift */,
 				9A1E28161E74902E00763694 /* UISwitch+Tap.swift */,
 				9A1E28181E74908300763694 /* UISlider+Tap.swift */,
 				9A1E281A1E7490F100763694 /* UITableView+Tap.swift */,
-				9A1E28221E74942500763694 /* UICollectionView+Tap.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -228,9 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A1E28251E75FC6400763694 /* GestureViewController.swift in Sources */,
 				9A13E08B1E706FB300B384B5 /* TableViewController.swift in Sources */,
-				9A1E28231E74942500763694 /* UICollectionView+Tap.swift in Sources */,
+				9A1E28281E75FCA800763694 /* UIBarButtonItem+Tap.swift in Sources */,
 				9A13E0891E706FB300B384B5 /* AppDelegate.swift in Sources */,
+				9A1E28291E75FCA800763694 /* UICollectionView+Tap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,11 +248,11 @@
 			files = (
 				9A1E28201E74921400763694 /* UISlider+Tap.swift in Sources */,
 				9A1E281F1E74921400763694 /* UISwitch+Tap.swift in Sources */,
-				9A1E281C1E74921400763694 /* UIBarButtonItem+Tap.swift in Sources */,
 				9A1E281D1E74921400763694 /* UIButton+Tap.swift in Sources */,
 				9A1E28211E74921400763694 /* UITableView+Tap.swift in Sources */,
 				9A1E281E1E74921400763694 /* UISegmentedControl+Tap.swift in Sources */,
 				9A13E09E1E706FB300B384B5 /* TableViewControllerTests.swift in Sources */,
+				9A1E282B1E75FEE900763694 /* GestureViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

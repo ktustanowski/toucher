@@ -26,7 +26,7 @@ public extension UIBarButtonItem {
     fileprivate func checkAction() {
         guard let _ = action else {
             assertionFailure("No action associated!")
-            return}
+            return }
     }
 
 }

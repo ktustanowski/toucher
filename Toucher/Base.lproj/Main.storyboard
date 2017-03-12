@@ -52,6 +52,16 @@
                                         <action selector="minusTapped" destination="03M-wq-mXX" eventType="touchUpInside" id="MM1-Gm-9jt"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0O-qK-7MJ">
+                                    <rect key="frame" x="152" y="16" width="71" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="71" id="lj1-JM-H8l"/>
+                                    </constraints>
+                                    <state key="normal" title="Gestures"/>
+                                    <connections>
+                                        <segue destination="kSG-9t-XzU" kind="show" id="Feg-Gq-7sp"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -59,6 +69,8 @@
                                 <constraint firstAttribute="trailing" secondItem="wTo-Vh-PeE" secondAttribute="trailing" constant="16" id="CSk-2h-mEE"/>
                                 <constraint firstItem="yc7-Pw-H3Z" firstAttribute="leading" secondItem="pph-bJ-pzi" secondAttribute="leading" constant="16" id="Hcu-rq-sE0"/>
                                 <constraint firstItem="yc7-Pw-H3Z" firstAttribute="centerY" secondItem="pph-bJ-pzi" secondAttribute="centerY" id="Jab-yr-1tX"/>
+                                <constraint firstItem="Y0O-qK-7MJ" firstAttribute="centerX" secondItem="pph-bJ-pzi" secondAttribute="centerX" id="aQ7-kn-ZWR"/>
+                                <constraint firstItem="Y0O-qK-7MJ" firstAttribute="baseline" secondItem="yc7-Pw-H3Z" secondAttribute="baseline" id="y69-hj-EEq"/>
                             </constraints>
                         </view>
                         <sections>
@@ -68,7 +80,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lu3-wQ-zou" id="2Hl-7c-nBP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="t21-Tg-rT8">
@@ -94,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fjm-bi-hg0" id="div-Ko-UFY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9XQ-Ja-TpP">
@@ -122,7 +134,7 @@
                                         <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A6W-DS-3ne" id="VEb-2C-8dh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="kga-Rz-lBC">
@@ -143,7 +155,7 @@
                                         <rect key="frame" x="0.0" y="160" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dJV-gG-na3" id="MwS-sE-err">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="agd-WT-1is">
@@ -167,11 +179,11 @@
                                         <rect key="frame" x="0.0" y="232" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWI-yb-5kB" id="eco-dN-34I">
-                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tap to +1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LCO-HE-cGw">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -184,11 +196,11 @@
                                         <rect key="frame" x="0.0" y="276" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGr-bk-cjV" id="AXd-Tp-Ill">
-                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tap to -1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ozX-fj-bpM">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -205,7 +217,7 @@
                                         <rect key="frame" x="0.0" y="348" width="375" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dz0-i4-VJ8" id="XYT-7r-YMc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="156.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SnL-j6-fdS">
@@ -271,6 +283,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPH-IC-BTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--0-->
+        <scene sceneID="v85-3K-oDF">
+            <objects>
+                <viewController storyboardIdentifier="GestureViewController" title="0" id="kSG-9t-XzU" customClass="GestureViewController" customModule="Toucher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qmn-bS-puU"/>
+                        <viewControllerLayoutGuide type="bottom" id="kEY-xa-bnX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jdG-XW-k2H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="RfT-Ey-PQ4" appends="YES" id="D40-qX-z2p"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="tapRecognizer" destination="RfT-Ey-PQ4" id="BDp-HM-EIU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXU-YI-oeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RfT-Ey-PQ4">
+                    <connections>
+                        <action selector="didTap:" destination="kSG-9t-XzU" id="nw6-0Q-dB9"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="142" y="875"/>
         </scene>
     </scenes>
 </document>
